@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Dastkaar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="padding:100px 20px;">
+        <h1>Contact Us</h1>
+        <p>We are here to help you anytime</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="products">
+
+        <h2>Get In Touch</h2>
+
+        <div class="products-container">
+
+            <!-- FORM -->
+            <div class="product-card" style="text-align:left;">
+                <h3>Send Message</h3>
+
+                <input type="text" id="contactName" placeholder="Your Name"><br><br>
+                <input type="email" id="contactEmail" placeholder="Your Email"><br><br>
+                <textarea id="contactMessage" placeholder="Your Message" rows="4" style="width:100%; padding:10px; border:1.5px solid #ccc; border-radius:8px; font-family:inherit; font-size:14px; resize:vertical;"></textarea><br><br>
+
+                <button class="buy-btn" onclick="sendMessage()">Send Message</button>
+
+                <p id="contactMsg" style="margin-top:14px; font-weight:600; font-size:14px;"></p>
+            </div>
+
+            <!-- INFO -->
+            <div class="product-card">
+                <h3>Contact Info</h3>
+                <p>📧 Email: support@dastkaar.com</p>
+                <p>📞 Phone: +92 300 0000000</p>
+                <p>📍 Location: Lahore, Pakistan</p>
+                <br>
+                <h3>Business Hours</h3>
+                <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <!-- MAP -->
+            <div class="product-card" style="padding:0; overflow:hidden;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108882.56674538!2d74.2710467!3d31.5203696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                    width="100%"
+                    height="100%"
+                    style="border:0; min-height:280px; display:block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        function sendMessage() {
+            let name    = document.getElementById("contactName").value.trim();
+            let email   = document.getElementById("contactEmail").value.trim();
+            let message = document.getElementById("contactMessage").value.trim();
+            let msg     = document.getElementById("contactMsg");
+
+            // Validation
+            if (!name || !email || !message) {
+                msg.innerText = "⚠ Please fill all fields.";
+                msg.style.color = "red";
+                return;
+            }
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                msg.innerText = "⚠ Please enter a valid email address.";
+                msg.style.color = "red";
+                return;
+            }
+
+            // Success
+            msg.innerText = "✔ Message sent successfully! We'll get back to you soon.";
+            msg.style.color = "green";
+
+            // Clear form
+            document.getElementById("contactName").value    = "";
+            document.getElementById("contactEmail").value   = "";
+            document.getElementById("contactMessage").value = "";
+
+            // Hide message after 4 seconds
+            setTimeout(() => { msg.innerText = ""; }, 4000);
+        }
+    </script>
+
+</body>
+
+</html>

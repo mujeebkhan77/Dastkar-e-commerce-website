@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Dastkaar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar — Admin</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">← Back to Site</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-section">
+
+        <h2>Add New Product</h2>
+        <p id="adminMsg" class="admin-msg"></p>
+
+        <div class="admin-form">
+            <input type="text" id="name" placeholder="Product Name">
+            <input type="number" id="price" placeholder="Price (e.g. 120)" min="1">
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="Rugs">Rugs</option>
+                <option value="Mats">Mats</option>
+                <option value="Carpets">Carpets</option>
+            </select>
+            <textarea id="desc" placeholder="Product Description" rows="3"></textarea>
+            <label class="file-label">
+                Choose Image
+                <input type="file" id="imageFile" accept="image/*">
+            </label>
+            <span id="fileName" class="file-name">No file chosen</span>
+            <button onclick="addProduct()" class="buy-btn admin-btn">Add Product</button>
+        </div>
+
+        <h2 style="margin-top:50px;">Admin Added Products</h2>
+        <p style="text-align:center; color:#888; font-size:14px;">
+        </p>
+
+        <div id="adminProducts" class="admin-products-grid"></div>
+
+    </section>
+
+    <script>
+        // Show filename when file selected
+        document.getElementById("imageFile").addEventListener("change", function () {
+            let name = this.files[0] ? this.files[0].name : "No file chosen";
+            document.getElementById("fileName").innerText = name;
+        });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

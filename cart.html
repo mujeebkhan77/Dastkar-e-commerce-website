@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Dastkaar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="toast" class="toast"></div>
+
+<body>
+
+    <!-- =========================
+         Navbar Section
+    ========================== -->
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html" class="active">Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="cart.html">
+                    Cart 🛒 <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- =========================
+         Cart Section
+    ========================== -->
+    <section class="products">
+
+        <h2>Your Cart</h2>
+
+        <div id="cartContainer" class="cart-container"></div>
+        <a href="checkout.html" class="buy-btn" id="checkoutBtn">
+            Proceed to Checkout
+        </a>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

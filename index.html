@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastkaar</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<div id="toast" class="toast"></div>
+
+<body>
+
+    <!-- =========================
+         Navbar Section Start
+    ========================== -->
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="cart.html">
+                    Cart 🛒 <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         Hero Section Start
+    ========================== -->
+    <section class="hero">
+        <h1 data-aos="fade-down">Dastkaar</h1>
+        <p data-aos="fade-up">Handmade rugs crafted with tradition and modern elegance</p>
+        <a href="shop.html" class="hero-btn" data-aos="zoom-in">Shop Now</a>
+    </section>
+
+
+    <!-- =========================
+         Product Section Start
+    ========================== -->
+    <section class="products">
+        <h2>Our Products</h2>
+        <h3 class="category-title">Shop By Category</h3>
+        <div class="category-buttons">
+
+            <button onclick="filterCategory('All')" class="buy-btn">
+                All
+            </button>
+
+            <button onclick="filterCategory('Rugs')" class="buy-btn">
+                Rugs
+            </button>
+
+            <button onclick="filterCategory('Mats')" class="buy-btn">
+                Mats
+            </button>
+
+            <button onclick="filterCategory('Carpets')" class="buy-btn">
+                Carpets
+            </button>
+
+        </div>
+        <div class="products-container">
+
+            <!--dynamic product cards will be inserted here-->
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Explore Section Start
+    ========================== -->
+    <div class="explore-wrapper">
+        <a href="shop.html" class="explore-btn">Explore More</a>
+    </div>
+
+
+    <!-- =========================
+         Animation Script Start
+    ========================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <!-- =========================
+     FOOTER SECTION
+========================= -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>About Dastkaar</h3>
+                <p>
+                    Dastkaar is a handmade rug brand offering premium quality traditional and modern carpets.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Email: support@dastkaar.com</p>
+                <p>Phone: +92 300 0000000</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a><br>
+                <a href="shop.html">Shop</a><br>
+                <a href="cart.html">Cart</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Dastkaar. All rights reserved.</p>
+        </div>
+
+    </footer>
+    <!--JavaScript File Connection-->
+    <script src="script.js"></script>
+</body>
+
+</html>

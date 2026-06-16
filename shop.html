@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastkaar - Shop</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="toast" class="toast"></div>
+
+<body>
+
+    <!-- =========================
+         Navbar Section Start
+    ========================== -->
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="cart.html">
+                    Cart 🛒 <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         Shop Section Start
+    ========================== -->
+    <section class="products">
+
+        <h2>All Products</h2>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <h3 class="category-title">Shop By Category</h3>
+        <div class="category-buttons">
+
+            <button onclick="filterCategory('All')" class="buy-btn">
+                All
+            </button>
+
+            <button onclick="filterCategory('Rugs')" class="buy-btn">
+                Rugs
+            </button>
+
+            <button onclick="filterCategory('Mats')" class="buy-btn">
+                Mats
+            </button>
+
+            <button onclick="filterCategory('Carpets')" class="buy-btn">
+                Carpets
+            </button>
+
+        </div>
+        <div class="products-container">
+
+            <!-- Products will be dynamically inserted here -->
+
+        </div>
+
+    </section>
+    <!--JavaScript File Connection-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

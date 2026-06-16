@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Dastkaar</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="toast" class="toast"></div>
+
+<body>
+
+    <!-- =========================
+         Navbar Section Start
+    ========================== -->
+    <nav class="navbar">
+        <h1 class="logo">Dastkaar</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="cart.html">
+                    Cart 🛒 <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         Product Detail Section Start
+    ========================== -->
+    <section class="product-detail">
+
+        <div class="product-detail-container">
+
+            <div class="product-detail-image">
+                <img id="productImage" src="" alt="">
+            </div>
+
+            <div class="product-detail-info">
+
+                <h1 id="productName"></h1>
+
+                <p class="price" id="productPrice"></p>
+
+                <p class="desc" id="productDesc"></p>
+
+                <button id="addToCartBtn" class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+    <!--JavaScript File Connection-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
